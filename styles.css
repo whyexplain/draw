@@ -32,6 +32,17 @@
     justify-content: center;
 }
 
-.cell {
+.cellA {
     background-color: white;
 }
+
+.black {
+    background-color: black;
+}
+
+/* 
+#cell:hover {
+    background-color: black !important;
+
+}
+*/
