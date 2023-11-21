@@ -1,6 +1,9 @@
 let blackA = false
 let eraserA = false
 let randomA = false
+let shadingA = false
+let selectA = false
+
 
 const container = document.querySelector('#container')
 ;
@@ -44,6 +47,8 @@ else {alert('Put EVEN Number Betwen 2-100')}
                     if (blackA === true) {black()}
                     else if (eraserA === true) {eraser()}
                     else if (randomA === true) {random()}
+                    else if (selectA === true) {select()}
+                    else if (shadingA === true) {shading()}
                 }, false); 
             }
 
@@ -68,6 +73,16 @@ function getRandomColor () {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+function select () {
+
+
+
+}
+function shading (OPP = 1) {
+     OPP = OPP - 0.1
+    event.target.style.opacity = OPP
 }
 
 
