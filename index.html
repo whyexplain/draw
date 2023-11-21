@@ -10,28 +10,58 @@
 <body>
     <h1 class="title">Sketch</h1>
     <div id="contain">
+        <div class="buttons">
+            <button id="btn1" onclick="
+            blackA = true
+            eraserA = false
+            randomA = false
+            shadingA =false
+            selectA = false
+            ">
+                Black
+            </button>
+        
+            <button id="btn2" onclick="
+                blackA = false
+                eraserA = true
+                randomA = false
+                shadingA =false
+                selectA = false
+            ">Eraser</button>
+        
+            <button id="btn3" onclick="
+            GridF(prompt('Put EVEN Number Between 2-100'))
+            ">Change Grid</button>
+        
+            <button id="btn4" onclick="
+                randomA = true
+                blackA = false
+                eraserA = false
+                shadingA =false
+                selectA = false
+            ">Random</button>
+        
+            <button id="btn5" onclick="
+                randomA = false
+                blackA = false
+                eraserA = false
+                shadingA =true
+                selectA = false
+            ">Shading</button>
+        
+            <button id="btn6" onclick="
+                randomA = false
+                blackA = false
+                eraserA = false
+                shadingA =false
+                selectA = true
+            ">Select</button>
+
+            <button id="btn7" onclick="
+Reset()
+            ">Reset</button>
+        </div>
         <div id="container"></div>
     </div>
-
-
-    <div class="buttons">
-    <button id="btn1" onclick="
-    blackA = true
-    eraserA = false
-    ">
-        Black
-    </button>
-
-    <button id="btn2" onclick="
-        blackA = false
-        eraserA = true
-    ">Eraser</button>
-
-    <button id="btn3" onclick="
-    GridF(prompt('Put EVEN Number Between 2-100'))
-    ">Change Grid</button>
-
-    </div>
-
 </body>
 </html>

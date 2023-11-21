@@ -1,5 +1,6 @@
 let blackA = false
 let eraserA = false
+let randomA = false
 
 const container = document.querySelector('#container')
 ;
@@ -7,21 +8,6 @@ const container = document.querySelector('#container')
 
 
 
-/* for (let i = 0; i < 1600; i++) {
-    console.log('BRUH');
-            var cell = document.createElement('div');
-            cell.classList.add('cellA');
-            cell.setAttribute("id", 'cell');
-            cell.style.cssText = 'height: 10px; width: 10px;'
-            container.appendChild(cell);
-
-
-            cell.addEventListener("mouseenter", function( event ) {
-                if (blackA === true) {black()}
-                else if (eraserA === true) {eraser()}
-            }, false); 
-        }
-*/
 function GridF (value = 0) {
 if ((((parseInt(value)) % 2) === 0) && value < 101) {
     container.replaceChildren();
@@ -38,67 +24,30 @@ if ((((parseInt(value)) % 2) === 0) && value < 101) {
                 cell.addEventListener("mouseenter", function( event ) {
                     if (blackA === true) {black()}
                     else if (eraserA === true) {eraser()}
+                    else if (randomA === true) {random()}
                 }, false); 
             }  
 }
 else {alert('Put EVEN Number Betwen 2-100')}
 }
 
-    for (let i = 0; i < 1600; i++) {
+    for (let i = 0; i < 400; i++) {
         console.log('BRUH');
                 var cell = document.createElement('div');
                 cell.classList.add('cellA');
                 cell.setAttribute("id", 'cell');
-                cell.style.cssText = 'height: 10px; width: 10px;'
+                cell.style.cssText = 'height: 20px; width: 20px;'
                 container.appendChild(cell);
     
     
                 cell.addEventListener("mouseenter", function( event ) {
                     if (blackA === true) {black()}
                     else if (eraserA === true) {eraser()}
+                    else if (randomA === true) {random()}
                 }, false); 
             }
 
 
-
-/* function grid () {
-    console.log('help pls')
-    container.replaceChildren();
-for (let i = 0; i < 400; i++) {
-    console.log('BRUH');
-            var cell = document.createElement('div');
-            cell.classList.add('cellA');
-            cell.setAttribute("id", 'cell');
-            cell.style.cssText = 'height: 20px; width: 20px;'
-            container.appendChild(cell);
-
-
-            cell.addEventListener("mouseenter", function( event ) {
-                if (blackA === true) {black()}
-                else if (eraserA === true) {eraser()}
-            }, false); 
-        }   
-    }
-*/        
-
-
-
-
-   /* for (let i = 0; i < 1600; i++) {
-        console.log('BRUH');
-                var cell = document.createElement('div');
-                cell.classList.add('cellA');
-                cell.setAttribute("id", 'cell');
-                cell.style.cssText = 'height: 10px; width: 10px;'
-                container.appendChild(cell);
-    
-    
-                cell.addEventListener("mouseenter", function( event ) {
-                    if (blackA === true) {black()}
-                    else if (eraserA === true) {eraser()}
-                }, false); 
-            }
-*/
 
 function black () {
     event.target.style.backgroundColor = "black";
@@ -106,6 +55,39 @@ function black () {
 
 function eraser () {
     event.target.style.backgroundColor = "white";
+}
+
+function random () {
+    event.target.style.backgroundColor = getRandomColor();
+}
+
+function getRandomColor () {
+    var letters = '012345789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+
+function Reset () {
+    container.replaceChildren();
+    for (let i = 0; i < 400; i++) {
+        console.log('BRUH');
+                cell = document.createElement('div');
+                cell.classList.add('cellA');
+                cell.setAttribute("id", 'cell');
+                cell.style.cssText = 'height: 20px; width: 20px;'
+                container.appendChild(cell);
+    
+    
+                cell.addEventListener("mouseenter", function( event ) {
+                    if (blackA === true) {black()}
+                    else if (eraserA === true) {eraser()}
+                    else if (randomA === true) {random()}
+                }, false); 
+            }
 }
 
 

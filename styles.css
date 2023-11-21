@@ -9,27 +9,27 @@
     font-family: 'roboto';
     color: beige;
     text-align: center;
-    font-size: 45px;
-    margin: 20px 0px 20px 0px;
+    font-size: 90px;
+    margin: 20px 0px 10px 0px;
 }
 
 #container {
     display: flex;
-    align-content: center;
+     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 20px 100px 20px 100px;
+    margin: 20px 0px 20px 0px;
     width: 400px;
     height: 400px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
 }
 
 #contain {
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: center;
 }
 
 .cellA {
@@ -40,9 +40,36 @@
     background-color: black;
 }
 
-/* 
-#cell:hover {
-    background-color: black !important;
-
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 0px 50px 0px 320px;
 }
-*/
+
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7 {
+    font-family: 'roboto';
+    background-color: beige;
+    border-radius: 999px;
+    box-shadow: 8px 8px 30px 0 black;
+    box-sizing: border-box;
+    color: #1d1e22;
+    cursor: pointer;
+    font-weight: bolder;
+    line-height: 30px;
+    opacity: 1;
+    width: 150px;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    font-size: 19px;
+    border: 0;
+    margin: 5px 0px 5px 0px;
+    transition: 0.3s;
+} 
+
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover {
+    opacity: 0.7;
+}
+#btn7:hover {
+    opacity: 0.7;
+}
